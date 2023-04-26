@@ -1,0 +1,67 @@
+// Mixins
+@mixin flexLayout {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+@mixin centerAbsolute {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+// Breakpoints
+@mixin response($breakpoint) {
+   // First Breakpoint 1300px
+   @if ($breakpoint == xlBreakPoint) {
+      @media (max-width: 1300px) {
+         @content;
+      }
+   }
+
+   // Second Breakpoint 1000px
+   @if ($breakpoint == lgBreakPoint) {
+      @media (max-width: 1000px) {
+         @content;
+      }
+   }
+
+   // Third Breakpoint 700px
+   @if ($breakpoint == mdBreakPoint) {
+      @media (max-width: 700px) {
+         @content;
+      }
+   }
+
+   // Mobile Breakpoint 600px
+
+   // Small mobile Breakpoint 370px
+   @if ($breakpoint == smMobileBreakPoint) {
+      @media (max-width: 370px) {
+         @content;
+      }
+   }
+}
+
+// How to call the breakpoints
+//Breakpoint 1300px
+// @include response(xlBreakPoint) {
+// }
+
+//Breakpoint 1000px
+// @include response(lgBreakPoint) {
+// }
+
+//Breakpoint 700px
+// @include response(mdBreakPoint) {
+// }
+
+//Breakpoint 600px
+// @include response(mobileBreakPoint) {
+// }
+
+//Breakpoint 370px
+// @include response(smMobileBreakPoint) {
+// }
