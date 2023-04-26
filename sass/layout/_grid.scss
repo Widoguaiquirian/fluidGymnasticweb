@@ -2,8 +2,4 @@
    display: grid;
    grid-template-columns: minmax(5rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(5rem, 1fr);
    grid-template-rows: min-content 100vh repeat(9, min-content);
-   background-color: red;
-   border: 1px solid yellow;
-   width: 100%;
-   height: 100%;
 }
