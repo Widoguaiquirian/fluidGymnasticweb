@@ -3,7 +3,10 @@
 }
 
 body {
-   background-color: rgb(255, 255, 255);
+   background-color: var(--color-primary);
+   display: grid;
+   grid-template-columns: minmax(5rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(5rem, 1fr);
+   grid-template-rows: min-content 100vh repeat(9, min-content);
 }
 
 img {

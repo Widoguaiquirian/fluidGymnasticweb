@@ -1,12 +1,9 @@
 html {
    font-size: 62.5%;
-
-   // Seleccionar el font de mobile
-   // @include response(mdBreakPoint) {
-   //    font-size: 56.25%;
-   // }
 }
 
 body {
    font-size: 1.6rem;
+   font-family: "Roboto", sans-serif;
+   line-height: 1.9;
 }

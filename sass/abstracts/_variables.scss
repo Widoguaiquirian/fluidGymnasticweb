@@ -1,10 +1,34 @@
-$primary-color: #333;
-$secondary-color: #ffe;
-$tertiary-color: #f2f0f1;
-$quaternary-color: #f5b149;
+// $xl-font: 3rem;
+// $lg-font: 2.5rem;
+// $md-font: 2rem;
+// $sm-font: 1.8rem;
+// $xs-font: 1.6rem;
 
-$xl-font: 3rem;
-$lg-font: 2.5rem;
-$md-font: 2rem;
-$sm-font: 1.8rem;
-$xs-font: 1.6rem;
+//The following properties are CSS custom properties, no sass variables and there are here to work with dark & light mode
+// Light Color Palette (Custom Properties)
+html {
+   --color-primary: hsl(87, 98%, 34%);
+   --color-primary-m: hsla(87, 100%, 45%, 0.55);
+   --color-secondary: hsl(274, 99%, 72%);
+   --color-secondary-m: hsl(274, 99%, 72%, 0.6);
+   --color-tertiary: hsl(185, 36%, 47%);
+   --color-tertiary-m: rgba(38, 52, 65, 0.65);
+   --color-quaternary: rgb(255, 235, 153);
+   --color-quaternary-m: rgba(192, 162, 43, 0.65);
+   --color-quinary: white;
+   --color-quinary-m: rgba(255, 255, 255, 0.5);
+}
+
+// Dark Color Palette (Custom Properties)
+html[data-theme="dark"] {
+   --color-primary: rgb(36, 38, 43);
+   --color-primary-m: rgba(36, 38, 43, 0.65);
+   --color-secondary: rgb(124, 185, 8);
+   --color-secondary-m: rgba(123, 185, 8, 0.5);
+   --color-tertiary: rgb(38, 52, 65);
+   --color-tertiary-m: hsla(183, 34%, 38%, 0.65);
+   --color-quaternary: hsl(220, 10%, 28%);
+   --color-quaternary-m: hsla(220, 10%, 28%, 0.65);
+   --color-quinary: white;
+   --color-quinary-m: rgba(255, 255, 255, 0.5);
+}
