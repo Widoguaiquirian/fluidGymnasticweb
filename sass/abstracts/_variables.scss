@@ -1,9 +1,3 @@
-// $xl-font: 3rem;
-// $lg-font: 2.5rem;
-// $md-font: 2rem;
-// $sm-font: 1.8rem;
-// $xs-font: 1.6rem;
-
 //The following properties are CSS custom properties, no sass variables and there are here to work with dark & light mode
 // Light Color Palette (Custom Properties)
 html {
@@ -32,3 +26,21 @@ html[data-theme="dark"] {
    --color-quinary: white;
    --color-quinary-m: rgba(255, 255, 255, 0.5);
 }
+
+// Font weights
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+// Font sizes
+$font-size-small: clamp(1.6rem, 4vw, 1.8rem);
+$font-size-regular: clamp(1.8rem, 4vw, 2rem);
+$font-size-medium: clamp(2rem, 4vw, 2.5rem);
+$font-size-large: clamp(2.8rem, 4vw, 3.2rem);
+$font-size-xlarge: clamp(3.5rem, 4vw, 3.8rem);
+
+// Padding section
+$padding-section: 3vh 1vw;

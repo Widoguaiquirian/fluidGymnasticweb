@@ -55,6 +55,26 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.9; }
 
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--color-quinary); }
+
+.test-1 {
+  font-size: clamp(1.6rem, 4vw, 1.8rem); }
+
+.test-2 {
+  font-size: clamp(1.8rem, 4vw, 2rem); }
+
+.test-3 {
+  font-size: clamp(2rem, 4vw, 2.5rem); }
+
+.test-4 {
+  font-size: clamp(2.8rem, 4vw, 3.2rem); }
+
+.test-5 {
+  font-size: clamp(3.5rem, 4vw, 3.8rem); }
+
 .uti-svg-ico {
   align-items: center;
   display: flex;
@@ -64,32 +84,39 @@ body {
   width: 3rem; }
 
 .clients {
-  grid-column: 2/10;
-  background-color: var(--color-quaternary); }
+  grid-column: 1/-1;
+  background-color: var(--color-quaternary);
+  padding: 3vh 1vw; }
 
 .features {
   grid-column: 2/10;
-  background-color: var(--color-secondary); }
+  background-color: var(--color-secondary);
+  padding: 3vh 1vw; }
 
 .motto {
   grid-column: 2/10;
-  background-color: var(--color-quaternary); }
+  background-color: var(--color-quaternary);
+  padding: 3vh 1vw; }
 
 .showcase {
   background-color: var(--color-tertiary);
-  grid-column: 1/-1; }
+  grid-column: 1/-1;
+  padding: 3vh 1vw; }
 
 .testimonials {
   grid-column: 1/-1;
-  background-color: var(--color-primary); }
+  background-color: var(--color-primary);
+  padding: 3vh 1vw; }
 
 .trainers {
   grid-column: 2/10;
-  background-color: var(--color-tertiary); }
+  background-color: var(--color-tertiary);
+  padding: 3vh 1vw; }
 
 .footer {
   grid-column: 1/-1;
-  background-color: #d82643; }
+  background-color: #d82643;
+  padding: 3vh 1vw; }
 
 .register {
   grid-column: 1/-1;
@@ -102,4 +129,5 @@ body {
 
 .header {
   grid-column: 1/-1;
-  background-color: var(--color-secondary); }
+  background-color: var(--color-secondary);
+  padding: 3vh 1vw; }
