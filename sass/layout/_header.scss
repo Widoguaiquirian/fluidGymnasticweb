@@ -54,16 +54,71 @@
 
       &--list {
          display: flex;
+         overflow: hidden;
 
          &__item {
             a:link,
             a:visited {
                margin-right: clamp(1rem, 2vw, 3rem);
-               padding: 0 1.5rem;
+
+               transition: all 0.5s ease;
             }
 
             a:hover,
             a:active {
+               color: darken(white, 20%);
+            }
+
+            .active {
+               color: darken(white, 20%);
+               position: relative;
+
+               &::after {
+                  content: "";
+                  position: absolute;
+                  width: 100%;
+                  height: 2px;
+                  background-color: darken(white, 20%);
+                  bottom: -2px;
+                  left: 0;
+               }
+            }
+         }
+
+         // direction downwards
+         &__item:nth-child(odd) {
+            animation: downwards 1s forwards;
+         }
+         // direction upwards
+         &__item:nth-child(even) {
+            animation: upwards 1s forwards;
+         }
+
+         // Dark mode toggle button
+         &__toggle-container {
+            display: flex;
+            align-items: center;
+
+            input[type="checkbox"] {
+               position: relative;
+               width: 6rem;
+               height: 3rem;
+               // Prefix
+               -webkit-appearance: none;
+               -moz-appearance: none;
+               background-color: var(--color-quinary);
+               border-radius: 15px;
+               box-shadow: inset 0 0 0.6rem 0.1rem rgba(0, 0, 0, 0.116);
+               cursor: pointer;
+               transition: all 0.5s ease-in-out;
+            }
+
+            input:checked[type="checkbox"] {
+               background-color: greenyellow;
+            }
+
+            input:not(:checked)[type="checkbox"] {
+               background-color: var(--color-tertiary);
             }
          }
       }

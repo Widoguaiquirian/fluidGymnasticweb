@@ -22,6 +22,22 @@ html[data-theme="dark"] {
   --color-quinary: white;
   --color-quinary-m: rgba(255, 255, 255, 0.5); }
 
+@keyframes upwards {
+  from {
+    transform: translateY(100%);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes downwards {
+  from {
+    transform: translateY(-100%);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+
 * {
   box-sizing: border-box; }
 
@@ -138,8 +154,45 @@ a:visited {
         height: 5rem;
         width: 5rem; }
     .header__nav--list {
-      display: flex; }
+      display: flex;
+      overflow: hidden; }
       .header__nav--list__item a:link,
       .header__nav--list__item a:visited {
         margin-right: clamp(1rem, 2vw, 3rem);
-        padding: 0 1.5rem; }
+        transition: all 0.5s ease; }
+      .header__nav--list__item a:hover,
+      .header__nav--list__item a:active {
+        color: #cccccc; }
+      .header__nav--list__item .active {
+        color: #cccccc;
+        position: relative; }
+        .header__nav--list__item .active::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: #cccccc;
+          bottom: -2px;
+          left: 0; }
+      .header__nav--list__item:nth-child(odd) {
+        animation: downwards 1s forwards; }
+      .header__nav--list__item:nth-child(even) {
+        animation: upwards 1s forwards; }
+      .header__nav--list__toggle-container {
+        display: flex;
+        align-items: center; }
+        .header__nav--list__toggle-container input[type="checkbox"] {
+          position: relative;
+          width: 6rem;
+          height: 3rem;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          background-color: var(--color-quinary);
+          border-radius: 15px;
+          box-shadow: inset 0 0 0.6rem 0.1rem rgba(0, 0, 0, 0.116);
+          cursor: pointer;
+          transition: all 0.5s ease-in-out; }
+        .header__nav--list__toggle-container input:checked[type="checkbox"] {
+          background-color: greenyellow; }
+        .header__nav--list__toggle-container input:not(:checked)[type="checkbox"] {
+          background-color: var(--color-tertiary); }

@@ -1,0 +1,25 @@
+// Nav animation Upwards
+@keyframes upwards {
+   from {
+      transform: translateY(100%);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+// Nav animation Downwards
+@keyframes downwards {
+   from {
+      transform: translateY(-100%);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
