@@ -1,28 +1,6 @@
 .header {
    grid-column: 1/-1;
 
-   // Dynamic class => is toggled using JavaScript
-   // These are the lines from the hamburguer
-   // Middle line
-   &.open .header__menu--line {
-      background-color: transparent;
-   }
-
-   // Top line
-   &.open .header__menu--line::before {
-      transform: rotate(45deg);
-   }
-
-   // Bottom line
-   &.open .header__menu--line::after {
-      transform: rotate(-45deg);
-   }
-
-   &.open .header__menu--line::before,
-   &.open .header__menu--line::after {
-      top: 0;
-   }
-
    &__overlay {
       width: 100%;
       height: 100vh;
@@ -60,7 +38,6 @@
             a:link,
             a:visited {
                margin-right: clamp(1rem, 2vw, 3rem);
-
                transition: all 0.5s ease;
             }
 
@@ -103,7 +80,8 @@
                position: relative;
                width: 6rem;
                height: 3rem;
-               // Prefix
+
+               // Prefixes
                -webkit-appearance: none;
                -moz-appearance: none;
                background-color: var(--color-quinary);
@@ -111,16 +89,150 @@
                box-shadow: inset 0 0 0.6rem 0.1rem rgba(0, 0, 0, 0.116);
                cursor: pointer;
                transition: all 0.5s ease-in-out;
+
+               // Toggle component
+               &::before,
+               &::after {
+                  content: "";
+                  position: absolute;
+                  top: 0.8rem;
+                  width: 1.5rem;
+                  height: 1.5rem;
+                  border-radius: 50px;
+                  background-color: var(--color-quinary);
+                  box-shadow: 0 0.1rem 0.3rem 0.1rem hsla(0, 0%, 50%, 0.35);
+                  transition: all 0.5s ease-in-out;
+               }
+
+               &::before {
+                  left: 0.5rem;
+               }
+
+               &::after {
+                  right: 0.5rem;
+               }
             }
 
             input:checked[type="checkbox"] {
                background-color: greenyellow;
+
+               // Centrar los circulitos
+               &::before {
+                  left: 37%;
+               }
+
+               &::after {
+                  right: 37%;
+               }
             }
 
             input:not(:checked)[type="checkbox"] {
                background-color: var(--color-tertiary);
             }
          }
+      }
+   }
+
+   // 800px mark Break point
+   @media (max-width: 800px) {
+      &__nav {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 25rem;
+         height: 100vh;
+         line-height: initial;
+         z-index: 20;
+         flex-direction: column;
+         align-items: center;
+         transform: translateX(-100%);
+         transition: all 0.5s ease;
+
+         &--list {
+            display: flex;
+            height: 80%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            &__item {
+               a:link,
+               a:visited {
+                  margin-right: initial;
+               }
+            }
+
+            // Toggle
+            &__toggle-container {
+               justify-content: center;
+            }
+         }
+      }
+
+      // Hamburguer menu
+      &__menu {
+         height: 4rem;
+         width: 4rem;
+         position: fixed;
+         top: 2rem;
+         padding: 2.5rem;
+         right: 5px;
+         cursor: pointer;
+         z-index: 20;
+
+         &--line,
+         &--line::before,
+         &--line::after {
+            content: "";
+            position: absolute;
+            width: 3.5rem;
+            height: 0.2rem;
+            background-color: var(--color-quinary);
+            transition: all 0.5s ease-in-out;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+         }
+
+         &--line::before {
+            top: -2.2rem;
+         }
+         &--line::after {
+            top: 1.3rem;
+         }
+      }
+
+      // Cuando el header tiene una clase de open entonces...
+      &.open .header__nav {
+         transform: translateX(0);
+         transition: transform 0.5s ease;
+      }
+
+      &.open &__overlay {
+         display: block;
+         opacity: 0.8;
+         transition: all 0.5s ease;
+      }
+
+      // Dynamic class => is toggled using JavaScript
+      // These are the lines from the hamburguer
+      // Middle line
+      &.open .header__menu--line {
+         background-color: transparent;
+      }
+
+      // Top line
+      &.open .header__menu--line::before {
+         transform: rotate(45deg);
+         top: 0;
+      }
+
+      // Bottom line
+      &.open .header__menu--line::after {
+         transform: rotate(-45deg);
+         top: 0;
       }
    }
 }
