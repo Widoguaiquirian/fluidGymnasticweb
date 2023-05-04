@@ -1,4 +1,6 @@
 "use strict";
+
+// Modals
 const header = document.querySelector(".header");
 const hamburguerMenu = document.querySelector(".header__menu");
 
@@ -6,6 +8,7 @@ hamburguerMenu.addEventListener("click", function () {
    header.classList.toggle("open");
 });
 
+// Dark theme
 const checkbox = document.querySelector('input[name="theme"]');
 const htmlElement = document.documentElement;
 
