@@ -1,1 +1,35 @@
 // Mixins
+
+// Background images
+@mixin bgImages {
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+// Styles for section headings (h2)
+@mixin sec-heading {
+   font-size: $font-size-medium;
+   font-weight: $font-weight-light;
+   letter-spacing: 0.2rem;
+   color: var(--color-quinary);
+}
+
+// Styles for section paragraph
+@mixin sec-para {
+   color: var(--color-quinary);
+   font-size: $font-size-small;
+   letter-spacing: 0.2rem;
+   font-family: "Balsamiq Sans", cursive;
+}
+
+// Styles for section h3
+@mixin sec-h3 {
+   color: var(--color-quinary);
+   font-size: $font-size-small;
+}
+
+// Styles for section h4
+@mixin sec-h4 {
+   color: var(--color-quinary);
+}

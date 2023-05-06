@@ -1,5 +1,5 @@
 .wrapper {
    display: grid;
    grid-template-columns: minmax(2rem, 1fr) repeat(8, minmax(min-content, 17.8rem)) minmax(2rem, 1fr);
-   grid-template-rows: min-content 60vh repeat(9, min-content);
+   grid-template-rows: min-content 80vh repeat(9, min-content);
 }

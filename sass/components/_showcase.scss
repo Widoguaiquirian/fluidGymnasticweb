@@ -1,4 +1,9 @@
+// 60vh applied from the grid template
 .showcase {
-   background-color: var(--color-tertiary);
    grid-column: 1/-1;
+   background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)),
+      url(/images/showcase/showcase-bg.jpg);
+
+   @include bgImages;
+   padding: $padding-section;
 }

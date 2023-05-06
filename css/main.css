@@ -97,8 +97,12 @@ a:visited {
   background-color: var(--color-quaternary); }
 
 .showcase {
-  background-color: var(--color-tertiary);
-  grid-column: 1/-1; }
+  grid-column: 1/-1;
+  background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url(/images/showcase/showcase-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6vh 4vw; }
 
 .testimonials {
   grid-column: 1/-1;
@@ -119,7 +123,7 @@ a:visited {
 .wrapper {
   display: grid;
   grid-template-columns: minmax(2rem, 1fr) repeat(8, minmax(min-content, 17.8rem)) minmax(2rem, 1fr);
-  grid-template-rows: min-content 60vh repeat(9, min-content); }
+  grid-template-rows: min-content 80vh repeat(9, min-content); }
 
 .header {
   grid-column: 1/-1; }
