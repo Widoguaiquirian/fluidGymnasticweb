@@ -1,6 +1,7 @@
 .features {
    grid-column: 2/10;
-   background-color: var(--color-secondary);
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
 
    &__content:first-child {
       background-image: url(/images/features/features-1.jpg);
@@ -45,5 +46,29 @@
    &__content:nth-child(9) {
       background-image: url(/images/features/features-9.jpg);
       @include bgImages;
+   }
+
+   &__content {
+      display: grid;
+      grid-gap: 2vw;
+      padding: 2rem;
+      height: 30rem;
+      align-items: center;
+
+      &--title {
+         @include sec-heading;
+         text-align: center;
+         font-weight: $font-weight-bold;
+         letter-spacing: 0.7rem;
+         background-color: var(--color-tertiary-m);
+      }
+
+      &--para {
+         @include sec-para;
+         text-align: center;
+         background-color: var(--color-primary-m);
+         font-weight: $font-size-medium;
+         padding: 1rem;
+      }
    }
 }

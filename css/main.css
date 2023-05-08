@@ -103,7 +103,8 @@ p {
 
 .features {
   grid-column: 2/10;
-  background-color: var(--color-secondary); }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); }
   .features__content:first-child {
     background-image: url(/images/features/features-1.jpg);
     background-size: cover;
@@ -149,6 +150,30 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
+  .features__content {
+    display: grid;
+    grid-gap: 2vw;
+    padding: 2rem;
+    height: 30rem;
+    align-items: center; }
+    .features__content--title {
+      font-size: clamp(2rem, 7vw, 3rem);
+      font-weight: 300;
+      letter-spacing: 0.2rem;
+      color: var(--color-quinary);
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 0.7rem;
+      background-color: var(--color-tertiary-m); }
+    .features__content--para {
+      color: var(--color-quinary);
+      font-size: clamp(1.6rem, 7vw, 1.8rem);
+      letter-spacing: 0.2rem;
+      font-family: "Balsamiq Sans", cursive;
+      text-align: center;
+      background-color: var(--color-primary-m);
+      font-weight: clamp(2rem, 7vw, 3rem);
+      padding: 1rem; }
 
 .motto {
   grid-column: 2/10;
