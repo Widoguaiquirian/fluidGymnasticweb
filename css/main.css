@@ -67,7 +67,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: clamp(1.6rem, 4vw, 1.8rem);
+  font-size: clamp(1.6rem, 7vw, 1.8rem);
   font-family: "Roboto", sans-serif;
   line-height: 1.9; }
 
@@ -75,6 +75,15 @@ a:link,
 a:visited {
   text-decoration: none;
   color: var(--color-quinary); }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0; }
 
 .uti-svg-ico {
   align-items: center;
@@ -102,7 +111,49 @@ a:visited {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 6vh 4vw; }
+  padding: 6vh 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+  .showcase__content {
+    display: flex;
+    flex-direction: column; }
+    .showcase__content--title {
+      text-align: center;
+      font-size: clamp(4rem, 7vw, 15rem);
+      font-weight: 300;
+      background-image: linear-gradient(135deg, var(--color-secondary), var(--color-quinary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      background-clip: text;
+      color: transparent; }
+    .showcase__content--para {
+      font-size: clamp(1.8rem, 7vw, 2.5rem);
+      font-weight: 300;
+      color: var(--color-quinary);
+      margin-bottom: clamp(1rem, 2vw, 3rem); }
+    .showcase__content--links {
+      display: flex;
+      justify-content: center; }
+      .showcase__content--links a:link,
+      .showcase__content--links a:visited {
+        font-size: clamp(1.6rem, 7vw, 1.8rem);
+        padding: clamp(0.5rem, 2vw, 1.2rem);
+        text-transform: uppercase;
+        position: relative;
+        border-radius: 0.5rem;
+        z-index: 1;
+        transition: all 0.5s ease; }
+      .showcase__content--links a:first-child {
+        background-color: var(--color-tertiary);
+        border: 2px solid var(--color-tertiary);
+        color: var(--color-quinary);
+        margin-right: calc(0.5rem + 2vw); }
+      .showcase__content--links a:last-child {
+        background-color: var(--color-secondary);
+        border: 2px solid var(--color-secondary);
+        color: var(--color-quinary); }
 
 .testimonials {
   grid-column: 1/-1;
