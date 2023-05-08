@@ -63,4 +63,11 @@
          }
       }
    }
+
+   // 800px mark Break point
+   @media (max-width: 800px) {
+      &__content {
+         align-items: flex-start;
+      }
+   }
 }

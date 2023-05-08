@@ -44,3 +44,8 @@ $font-size-xlarge: clamp(4rem, 7vw, 15rem);
 
 // Padding section
 $padding-section: 6vh 4vw;
+
+i {
+   color: var(--color-primary);
+   font-size: clamp(2rem, 7vw, 5rem);
+}

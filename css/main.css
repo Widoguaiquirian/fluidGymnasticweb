@@ -22,6 +22,10 @@ html[data-theme="dark"] {
   --color-quinary: white;
   --color-quinary-m: rgba(255, 255, 255, 0.5); }
 
+i {
+  color: var(--color-primary);
+  font-size: clamp(2rem, 7vw, 5rem); }
+
 @keyframes upwards {
   from {
     transform: translateY(100%);
@@ -103,7 +107,11 @@ p {
 
 .motto {
   grid-column: 2/10;
-  background-color: var(--color-quaternary); }
+  background-image: url(/images/motto/motto-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6vh 4vw; }
 
 .showcase {
   grid-column: 1/-1;
@@ -154,6 +162,9 @@ p {
         background-color: var(--color-secondary);
         border: 2px solid var(--color-secondary);
         color: var(--color-quinary); }
+  @media (max-width: 800px) {
+    .showcase__content {
+      align-items: flex-start; } }
 
 .testimonials {
   grid-column: 1/-1;

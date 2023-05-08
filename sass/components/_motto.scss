@@ -1,4 +1,6 @@
 .motto {
    grid-column: 2/10;
-   background-color: var(--color-quaternary);
+   background-image: url(/images/motto/motto-bg.jpg);
+   @include bgImages;
+   padding: $padding-section;
 }
