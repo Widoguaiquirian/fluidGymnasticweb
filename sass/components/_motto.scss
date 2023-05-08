@@ -115,3 +115,9 @@
       }
    }
 }
+// 800px mark Break point
+@media (max-width: 800px) {
+   .motto {
+      grid-column: 1/-1;
+   }
+}

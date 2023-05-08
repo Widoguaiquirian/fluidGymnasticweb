@@ -197,6 +197,10 @@ p {
       transition-duration: 1s;
       transition-delay: 0.75s; }
 
+@media (max-width: 800px) {
+  .motto {
+    grid-column: 1/-1; } }
+
 .showcase {
   grid-column: 1/-1;
   background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url(/images/showcase/showcase-bg.jpg);
