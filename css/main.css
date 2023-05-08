@@ -46,7 +46,7 @@ i {
   box-sizing: border-box; }
 
 body {
-  background-color: var(--color-primary); }
+  background-color: var(--color-primary-m); }
 
 img {
   max-width: 100%; }
@@ -104,7 +104,8 @@ p {
 .features {
   grid-column: 2/10;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  padding: 3rem 0; }
   .features__content:first-child {
     background-image: url(/images/features/features-1.jpg);
     background-size: cover;
@@ -174,6 +175,15 @@ p {
       background-color: var(--color-primary-m);
       font-weight: clamp(2rem, 7vw, 3rem);
       padding: 1rem; }
+    .features__content--link:link, .features__content--link:visited {
+      padding: 0.3rem 1rem;
+      overflow: hidden;
+      justify-self: start;
+      border: 0.4rem solid var(--color-primary-m); }
+
+@media (max-width: 800px) {
+  .features {
+    grid-column: 1/-1; } }
 
 .motto {
   grid-column: 2/10;

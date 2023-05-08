@@ -2,6 +2,7 @@
    grid-column: 2/10;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+   padding: 3rem 0;
 
    &__content:first-child {
       background-image: url(/images/features/features-1.jpg);
@@ -70,5 +71,20 @@
          font-weight: $font-size-medium;
          padding: 1rem;
       }
+
+      &--link:link,
+      &--link:visited {
+         padding: 0.3rem 1rem;
+         overflow: hidden;
+         justify-self: start;
+         border: 0.4rem solid var(--color-primary-m);
+      }
+   }
+}
+
+// 800px mark Break point
+@media (max-width: 800px) {
+   .features {
+      grid-column: 1/-1;
    }
 }
