@@ -172,7 +172,6 @@ p {
       letter-spacing: 0.2rem;
       font-family: "Balsamiq Sans", cursive;
       text-align: center;
-      background-color: var(--color-primary-m);
       font-weight: clamp(2rem, 7vw, 3rem);
       padding: 1rem; }
     .features__content--link:link, .features__content--link:visited {
@@ -340,7 +339,65 @@ p {
 
 .trainers {
   grid-column: 2/10;
-  background-color: var(--color-tertiary); }
+  background-color: var(--color-primary-m);
+  padding: 6vh 4vw; }
+  .trainers__title {
+    font-size: clamp(2rem, 7vw, 3rem);
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    color: var(--color-quinary);
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: var(--color-tertiary-m);
+    border-bottom-left-radius: 8rem;
+    border-bottom-right-radius: 8rem; }
+  .trainers__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-gap: 6vh calc(1rem + 1vw);
+    place-items: center; }
+    .trainers__content--card {
+      display: grid;
+      position: relative;
+      height: 20rem;
+      width: 30rem;
+      overflow: hidden; }
+      .trainers__content--card__specialty, .trainers__content--card__name {
+        position: absolute;
+        bottom: 20%;
+        left: 5%;
+        transform: translate(-25rem, 3rem);
+        transition: all 0.5s ease;
+        white-space: nowrap;
+        opacity: 0; }
+      .trainers__content--card__specialty {
+        color: var(--color-quinary); }
+      .trainers__content--card__name {
+        color: var(--color-quinary);
+        font-size: clamp(1.6rem, 7vw, 1.8rem); }
+      .trainers__content--card__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all 0.2s ease;
+        cursor: pointer; }
+    .trainers__content--card:hover .trainers__content--card__img,
+    .trainers__content--card:active .trainers__content--card__img {
+      filter: contrast(30%); }
+    .trainers__content--card:hover .trainers__content--card__specialty,
+    .trainers__content--card:active .trainers__content--card__specialty {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 110%);
+      z-index: 1;
+      opacity: 1; }
+    .trainers__content--card:hover .trainers__content--card__name,
+    .trainers__content--card:active .trainers__content--card__name {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 70%);
+      z-index: 1;
+      opacity: 1; }
 
 .footer {
   grid-column: 1/-1;
