@@ -44,3 +44,10 @@ for (let i = 0; i < indicatorImgs.length; i++) {
       slides[id].classList.add("active");
    });
 }
+
+// Scroll button
+const scroll = document.querySelector(".scroll");
+
+window.addEventListener("scroll", function () {
+   scroll.classList.toggle("active", window.scrollY > 200);
+});

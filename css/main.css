@@ -105,6 +105,30 @@ p {
   line-height: 0;
   width: 3rem; }
 
+.scroll {
+  position: fixed;
+  bottom: 70rem;
+  right: 4rem;
+  height: 4rem;
+  width: 4rem;
+  background-image: url(/images/scroll/scroll.svg);
+  background-repeat: no-repeat;
+  background-color: var(--color-secondary);
+  background-size: contain;
+  background-position: center;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.1s ease-in-out; }
+
+.scroll.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 4rem; }
+
 .clients {
   grid-column: 1/-1;
   background: linear-gradient(var(--color-quaternary-m), var(--color-quaternary-m)), url(/images/clients/clients-bg.jpg);
