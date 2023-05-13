@@ -42,6 +42,14 @@ i {
     transform: translateY(0);
     opacity: 1; } }
 
+@keyframes slide {
+  0% {
+    transform: translateX(-2rem);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
 * {
   box-sizing: border-box; }
 
@@ -335,7 +343,59 @@ p {
 
 .testimonials {
   grid-column: 1/-1;
-  background-color: var(--color-primary); }
+  background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url(/images/testimonials/testimonials-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6vh 4vw; }
+  .testimonials__title {
+    text-align: center;
+    font-size: clamp(2rem, 7vw, 3rem);
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    color: var(--color-quinary);
+    margin-bottom: 4vh; }
+  .testimonials__content {
+    max-width: 100rem;
+    margin: 0 auto; }
+    .testimonials__content--slider {
+      border: 0.1rem solid var(--color-quinary);
+      max-width: 60rem;
+      margin: 0 auto;
+      text-align: center;
+      padding: 2vh 1vw; }
+      .testimonials__content--slider__slide {
+        display: none; }
+        .testimonials__content--slider__slide--para {
+          color: var(--color-quinary);
+          font-size: clamp(1.6rem, 7vw, 1.8rem);
+          letter-spacing: 0.2rem;
+          font-family: "Balsamiq Sans", cursive;
+          margin-bottom: 3rem;
+          min-height: 15rem; }
+        .testimonials__content--slider__slide--title {
+          color: var(--color-quinary);
+          font-size: clamp(1.6rem, 7vw, 1.8rem); }
+      .testimonials__content--slider__slide.active {
+        display: block;
+        animation: slide 1s linear; }
+    .testimonials__content--indicator {
+      padding-top: 4vh;
+      padding-bottom: 4vh;
+      display: flex;
+      justify-content: center; }
+      .testimonials__content--indicator__img {
+        height: calc(7rem + 6vw);
+        width: calc(7rem + 6vw);
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 2vh 2vw;
+        opacity: 0.2;
+        border: 0.2rem solid var(--color-quinary);
+        cursor: pointer;
+        transition: opacity 1s ease; }
+      .testimonials__content--indicator__img.active {
+        opacity: 1; }
 
 .trainers {
   grid-column: 2/10;

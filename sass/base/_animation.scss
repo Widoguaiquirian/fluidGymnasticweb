@@ -23,3 +23,16 @@
       opacity: 1;
    }
 }
+
+// Testimonials animation sliders
+@keyframes slide {
+   0% {
+      transform: translateX(-2rem);
+      opacity: 0;
+   }
+
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}

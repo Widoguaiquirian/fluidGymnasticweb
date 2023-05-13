@@ -1,4 +1,68 @@
 .testimonials {
    grid-column: 1/-1;
-   background-color: var(--color-primary);
+   background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)),
+      url(/images/testimonials/testimonials-bg.jpg);
+   @include bgImages;
+   padding: $padding-section;
+
+   &__title {
+      text-align: center;
+      @include sec-heading;
+      margin-bottom: 4vh;
+   }
+
+   &__content {
+      max-width: 100rem;
+      margin: 0 auto;
+
+      &--slider {
+         border: 0.1rem solid var(--color-quinary);
+         max-width: 60rem;
+         margin: 0 auto;
+         text-align: center;
+         padding: 2vh 1vw;
+
+         &__slide {
+            // With this, all the slides with no active class, will be hidden
+            display: none;
+            &--para {
+               @include sec-para;
+               margin-bottom: 3rem;
+               min-height: 15rem;
+            }
+
+            &--title {
+               @include sec-h3;
+            }
+         }
+
+         &__slide.active {
+            display: block;
+            animation: slide 1s linear;
+         }
+      }
+
+      &--indicator {
+         padding-top: 4vh;
+         padding-bottom: 4vh;
+         display: flex;
+         justify-content: center;
+
+         &__img {
+            height: calc(7rem + 6vw);
+            width: calc(7rem + 6vw);
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 2vh 2vw;
+            opacity: 0.2;
+            border: 0.2rem solid var(--color-quinary);
+            cursor: pointer;
+            transition: opacity 1s ease;
+         }
+
+         &__img.active {
+            opacity: 1;
+         }
+      }
+   }
 }
