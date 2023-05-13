@@ -107,7 +107,39 @@ p {
 
 .clients {
   grid-column: 1/-1;
-  background-color: var(--color-quaternary); }
+  background: linear-gradient(var(--color-quaternary-m), var(--color-quaternary-m)), url(/images/clients/clients-bg.jpg);
+  padding: 6vh 4vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .clients__title {
+    font-size: clamp(2rem, 7vw, 3rem);
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    color: var(--color-quinary);
+    font-weight: bold;
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+    margin-bottom: 2vw; }
+  .clients__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-evenly; }
+    .clients__content--card {
+      background-color: var(--color-quinary-m);
+      border-radius: 15px;
+      padding: 1rem;
+      margin: 1rem 3rem; }
+      .clients__content--card__img {
+        transition: transform 0.5s ease;
+        cursor: pointer; }
+      .clients__content--card__img:hover {
+        transform: scale(1.1); }
+      @media (max-width: 600px) {
+        .clients__content--card {
+          margin: 0.5rem;
+          padding: 0.5rem; } }
 
 .features {
   grid-column: 2/10;
@@ -399,7 +431,7 @@ p {
 
 .trainers {
   grid-column: 2/10;
-  background-color: var(--color-primary-m);
+  background-color: var(--color-tertiary);
   padding: 6vh 4vw; }
   .trainers__title {
     font-size: clamp(2rem, 7vw, 3rem);

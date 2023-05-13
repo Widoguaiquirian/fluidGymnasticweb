@@ -1,4 +1,43 @@
 .clients {
    grid-column: 1/-1;
-   background-color: var(--color-quaternary);
+   background: linear-gradient(var(--color-quaternary-m), var(--color-quaternary-m)),
+      url(/images/clients/clients-bg.jpg);
+   padding: $padding-section;
+   @include bgImages;
+
+   &__title {
+      @include sec-heading;
+      font-weight: bold;
+      font-size: clamp(2rem, 5vw, 4rem);
+      text-align: center;
+      margin-bottom: 2vw;
+   }
+
+   &__content {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      justify-content: space-evenly;
+
+      &--card {
+         background-color: var(--color-quinary-m);
+         border-radius: 15px;
+         padding: 1rem;
+         margin: 1rem 3rem;
+
+         &__img {
+            transition: transform 0.5s ease;
+            cursor: pointer;
+         }
+
+         &__img:hover {
+            transform: scale(1.1);
+         }
+         // Mobile fix
+         @media (max-width: 600px) {
+            margin: 0.5rem;
+            padding: 0.5rem;
+         }
+      }
+   }
 }
