@@ -52,6 +52,17 @@ window.addEventListener("scroll", function () {
    scroll.classList.toggle("active", window.scrollY > 200);
 });
 
+function scrollToTop() {
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+   });
+}
+
+scroll.addEventListener("click", () => {
+   scrollToTop();
+});
+
 // Form register section
 // First page
 const slidePage = document.querySelector(".register__content--form__page");
